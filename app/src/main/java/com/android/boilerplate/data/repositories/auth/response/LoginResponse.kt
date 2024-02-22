@@ -16,8 +16,8 @@ data class UserData(
     var firstname: String? = null,
     var lastname: String? = null,
     var middlename: String? = null,
-    var name: String? = null,
-    var user_id: Int? = 0,
+    var user_name: String? = null,
+    var user_id: String? = null,
     var username: String? = null
 )
 

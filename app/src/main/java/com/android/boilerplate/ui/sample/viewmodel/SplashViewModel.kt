@@ -60,7 +60,7 @@ class SplashViewModel @Inject constructor(
                 var errorResponse: ErrorModel? = gson.fromJson(errorBody?.charStream(), type)
                 _splashStateFlow.emit(
                     SplashViewState.PopupError(
-                        PopupErrorState.HttpError, errorResponse?.msg.orEmpty()
+                        PopupErrorState.HttpError, errorResponse?.message.orEmpty()
                     )
                 )
             }

@@ -27,41 +27,12 @@ class SplashScreenActivity : AppCompatActivity() {
         binding = ActivitySplashscreenBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        observeRefreshToken()
-        viewModel.doRefreshToken()
-    }
+        val intent = MainActivity.getIntent(this)
+        startActivity(intent)
 
-    private fun observeRefreshToken() {
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.splashStateFlow.collect { viewState ->
-                    handleViewState(viewState)
-                }
-            }
-        }
-    }
 
-    private fun handleViewState(viewState: SplashViewState) {
-        when (viewState) {
-            is SplashViewState.Loading -> Unit
-            is SplashViewState.SuccessRefreshToken -> {
-                if (viewState.status){
-                        val intent = MainActivity.getIntent(this)
-                        startActivity(intent)
-                        this.finishAffinity()
-                }else{
-                    val intent = LoginActivity.getIntent(this)
-                    startActivity(intent)
-                    this.finish()
-                }
-            }
-            is SplashViewState.PopupError -> {
-                val intent = LoginActivity.getIntent(this)
-                startActivity(intent)
-                this.finish()
-            }
-            is SplashViewState.Idle -> Unit
-        }
+
+
     }
 
     companion object {

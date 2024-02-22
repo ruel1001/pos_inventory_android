@@ -87,7 +87,7 @@ class ArticleListViewModel @Inject constructor(
                         }else{
                             PopupErrorState.HttpError
                         }
-                        , errorResponse?.msg.orEmpty()
+                        , errorResponse?.message.orEmpty()
                     )
                 )
             }

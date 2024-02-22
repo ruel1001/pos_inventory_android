@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="@dimen/dimen_100"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:fontFamily="@font/objective_bold"
+            android:text="Payment"
+            android:textSize="@dimen/font_20" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/account_numberTextInputLayout"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_2"
+                    android:fontFamily="@font/objective_regular"
+                    android:hint="Account number"
+                    app:boxBackgroundColor="@color/white"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/account_numberEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/objective_regular"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:enabled="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/account_nameTextInputLayout"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_2"
+                    android:fontFamily="@font/objective_regular"
+                    android:hint="Full name"
+                    app:boxBackgroundColor="@color/white"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/account_nameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/objective_regular"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:enabled="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addressTextInputLayout"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_2"
+                    android:fontFamily="@font/objective_regular"
+                    android:hint="Address"
+                    app:boxBackgroundColor="@color/white"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/addressEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/objective_regular"
+                        android:inputType="text"
+                        android:enabled="false"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/billingMonthTextInputLayout"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_2"
+                    android:fontFamily="@font/objective_regular"
+                    android:hint="Billing Month"
+                    app:boxBackgroundColor="@color/white"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/billingMonthEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/objective_regular"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/amount_balanceTextInputLayout"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_2"
+                    android:fontFamily="@font/objective_regular"
+                    android:hint="Amount Balance"
+                    app:boxBackgroundColor="@color/white"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/amount_balanceEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/objective_regular"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:enabled="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/planTextInputLayout"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_2"
+                    android:enabled="false"
+                    android:fontFamily="@font/objective_regular"
+                    android:hint="Plan Subscribed"
+                    app:boxBackgroundColor="@color/white"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/planEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/objective_regular"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/arrearTextInputLayout"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_2"
+                    android:fontFamily="@font/objective_regular"
+                    android:hint="Arrears of the Month"
+                    app:boxBackgroundColor="@color/white"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/arrearsEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/objective_regular"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/amount_paidTextInputLayout"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_2"
+                    android:fontFamily="@font/objective_regular"
+                    android:hint="Amount paid"
+                    app:boxBackgroundColor="@color/white"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/amount_paiEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/objective_regular"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/collectorTextInputLayout"
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_2"
+                    android:fontFamily="@font/objective_regular"
+                    android:hint="Collectors Name"
+                    app:boxBackgroundColor="@color/white"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/collectorEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/objective_regular"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:enabled="false"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:background="@drawable/bg_button_bg"
+            android:fontFamily="@font/fira_sans_semibold"
+            android:padding="@dimen/dimen_10"
+            android:text="Pay"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/printButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:fontFamily="@font/fira_sans_semibold"
+            android:padding="@dimen/dimen_10"
+            android:text="Print"
+            android:textAlignment="center"
+            android:textSize="@dimen/font_16" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -10,11 +10,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.android.boilerplate.R
-import com.android.boilerplate.data.model.ArticleModel
 import com.android.boilerplate.data.repositories.article.response.ArticleData
 import com.android.boilerplate.databinding.FragmentArticleBinding
-import com.android.boilerplate.ui.article.activity.CreateArticleActivity
+import com.android.boilerplate.ui.article.activity.CustomerActivity
 import com.android.boilerplate.ui.article.viewmodel.ArticleListViewModel
 import com.android.boilerplate.ui.article.viewmodel.ArticleListViewState
 import com.android.boilerplate.ui.sample.adapter.ArticleAdapter
@@ -50,7 +48,7 @@ class ArticleFragment: Fragment(), ArticleAdapter.ArticleCallback, SwipeRefreshL
         observeArticleList()
         setupArticleList()
         setupClickListeners()
-        viewModel.getArticleList(true)
+       // viewModel.getArticleList(true)
     }
 
     private fun setupArticleList() = binding.run {
@@ -104,8 +102,8 @@ class ArticleFragment: Fragment(), ArticleAdapter.ArticleCallback, SwipeRefreshL
 
 
     private fun setupClickListeners() = binding.run {
-        createArticleButton.setOnSingleClickListener {
-            val intent = CreateArticleActivity.getIntent(requireActivity())
+        CustomersLinearLayout.setOnSingleClickListener {
+            val intent = CustomerActivity.getIntent(requireActivity())
             startActivity(intent)
         }
     }

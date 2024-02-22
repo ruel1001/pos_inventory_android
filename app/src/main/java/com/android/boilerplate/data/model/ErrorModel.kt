@@ -1,8 +1,8 @@
 package com.android.boilerplate.data.model
 
 data class ErrorModel(
-    val msg: String? = null,
-    val status: Boolean? = false,
+    val message: String? = null,
+    val status: String?  = null,
     val status_code: String? = null,
     val has_requirements: Boolean? = false,
     var errors: ErrorsData? = null
@@ -11,6 +11,9 @@ data class ErrorModel(
 data class ErrorsData(
     var email: List<String>? = null,
     var password: List<String>? = null,
+    var user_name: List<String>? = null,
+    var address: List<String>? = null,
+    var username: List<String>? = null,
     var password_confirmation: List<String>? = null,
     var firstname: List<String>? = null,
     var lastname: List<String>? = null,

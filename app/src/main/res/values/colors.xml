@@ -7,10 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <color name="color_primary">#FFBB86FC</color>
+    <color name="grayDark">#BABABA</color>
+    <color name="color_primary">#ff0d47a1</color>
     <color name="color_primaryDark">#FF6200EE</color>
     <color name="color_accent">#FF3700B3</color>
     <color name="commons_text_hint">#979797</color>
-
+    <color name="light_gray">#E0E0E0</color>
+    <color name="smoke">#96D5D5D5</color>
+    <color name="gray">#969B9B9B</color>
+    <color name="my_card_transparent">#85000000</color>
 </resources>

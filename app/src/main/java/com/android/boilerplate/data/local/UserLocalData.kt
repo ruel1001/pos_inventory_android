@@ -7,15 +7,11 @@ import androidx.room.PrimaryKey
 data class UserLocalData(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
-    var avatar : String? = null,
+    var user_name : String? = null,
+    var username : String? = null,
+    val address: String? = null,
     val email: String? = null,
-    val firstname: String? = null,
-    val lastname: String? = null,
-    val middlename: String? = null,
-    val name: String? = null,
-    val user_id: Int? = null,
-    val username: String? = null,
-    val access_token: String? = null
+    val token: String? = null
 ){
-    fun getFullName() = "$firstname $middlename $lastname"
+    fun getFullName() = "$user_name "
 }

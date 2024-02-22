@@ -9,17 +9,14 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.android.boilerplate.R
-import com.android.boilerplate.data.model.ErrorModel
 import com.android.boilerplate.data.model.ErrorsData
 import com.android.boilerplate.databinding.ActivityLoginBinding
 import com.android.boilerplate.ui.sample.viewmodel.LoginViewModel
 import com.android.boilerplate.ui.sample.viewmodel.LoginViewState
 import com.android.boilerplate.utils.dialog.CommonDialog
-import com.android.boilerplate.utils.dialog.CommonsErrorDialog
 import com.android.boilerplate.utils.setOnSingleClickListener
 import com.android.boilerplate.utils.showPopupError
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -37,14 +34,25 @@ class LoginActivity : AppCompatActivity() {
         setContentView(view)
         setupClickListener()
         observeLogin()
+
+
+
+
     }
+
 
     private fun setupClickListener() = binding.run{
         loginButton.setOnSingleClickListener {
+
             viewModel.doLoginAccount(
                 emailEditText.text.toString(),
-                passwordEditText.text.toString()
-            )
+                passwordEditText.text.toString())
+
+        }
+
+        signupTexView.setOnClickListener {
+            val intent = RegisterActivity.getIntent(this@LoginActivity)
+            startActivity(intent)
         }
     }
 

@@ -28,7 +28,7 @@ class HomeFragment: Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private val viewModel: LoginViewModel by viewModels()
-
+    private val activity by lazy { requireActivity() as MainActivity }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -46,8 +46,8 @@ class HomeFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setClickListeners()
         observeUserInfo()
-        viewModel.getUserInfo()
-
+     //  viewModel.getUserInfo()
+        activity.setNoToolbar()
     }
 
     private fun observeUserInfo(){
@@ -72,9 +72,9 @@ class HomeFragment: Fragment() {
     }
 
     private fun setClickListeners() = binding.run {
-        loadWebViewDialogButton.setOnSingleClickListener {
-            openWebViewDialog()
-        }
+//        loadWebViewDialogButton.setOnSingleClickListener {
+//            openWebViewDialog()
+//        }
     }
 
     private fun openWebViewDialog(){

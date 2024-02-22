@@ -16,8 +16,29 @@
     <string name="logout_title_lbl">We hate to see you leave.</string>
     <string name="logout_desc_lbl">Continue signing out?</string>
     <string name="logout_btn">Logout</string>
+    <string name="scan_qr_code_desc">Place the markers around the\nQR code to begin scanning.</string>
+    <string name="scan_qr_code_title">Scan QR Code</string>
+    <string name="invalid_qr_code_msg">Invalid QR Code</string>
+    <string name="loading">loading....</string>
+    <string name="services_qr_scan_qr_code">Scan QR Code</string>
+    <string name="services_qr_place_the_markers_around_the">Place the markers around the</string>
+    <string name="services_qr_code_to_begin_scanning">QR code to begin scanning.</string>
+    <string name="services_qr_if_the_scanner_is_not_working">If the scanner is not working,</string>
+    <string name="services_qr_input_reference_code">input account number.</string>
+    <string name="services_qr_scan_the_qr_code">scan the QR Code.</string>
+    <string name="check_lbl">Check Account Number </string>
+    <string name="services_zqr_reference_code">Account Number</string>
     <string name="logout_cancel_btn">Cancel</string>
     <string name="login_loading">Logging in...</string>
     <string name="create_article_loading">Creating Article...</string>
+    <string name="payments">Payments</string>
+    <string name="sign_up"><u>Create Account</u></string>
+    <string name="title_name">POS with Inventory </string>
+    <string name="cancel"><u>Cancel</u></string>
+    <string name="menu">Menu</string>
+    <string-array name="spinner_roles">
+        <item>Admin</item>
+        <item>Customer</item>
 
+    </string-array>
 </resources>

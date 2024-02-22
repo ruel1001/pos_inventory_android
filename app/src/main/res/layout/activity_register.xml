@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_20">
+
+    <ImageView
+        android:layout_width="@dimen/dimen_100"
+        android:layout_height="@dimen/dimen_100"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:visibility="gone"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:layout_gravity="center"
+        android:fontFamily="@font/objective_bold"
+        android:textSize="@dimen/font_20"
+        android:text="@string/title_name"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_gravity="center"
+        android:fontFamily="@font/objective_bold"
+        android:textSize="@dimen/font_20"
+        android:text="DADAW"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTextInputLayout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:drawablePadding="@dimen/dimen_10"
+        android:elevation="@dimen/dimen_2"
+        android:fontFamily="@font/objective_regular"
+        android:hint="Name"
+        app:boxBackgroundColor="@color/white"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/objective_regular"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTextInputLayout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:drawablePadding="@dimen/dimen_10"
+        android:elevation="@dimen/dimen_2"
+        android:fontFamily="@font/objective_regular"
+        android:hint="Email address"
+        app:boxBackgroundColor="@color/white"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/objective_regular"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameTextInputLayout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:drawablePadding="@dimen/dimen_10"
+        android:elevation="@dimen/dimen_2"
+        android:fontFamily="@font/objective_regular"
+        android:hint="Username"
+        app:boxBackgroundColor="@color/white"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/objective_regular"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addressTextInputLayout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:drawablePadding="@dimen/dimen_10"
+        android:elevation="@dimen/dimen_2"
+        android:fontFamily="@font/objective_regular"
+        android:hint="Address"
+        app:boxBackgroundColor="@color/white"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/objective_regular"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passTextInputLayout"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:drawablePadding="@dimen/dimen_10"
+        android:elevation="@dimen/dimen_2"
+        android:fontFamily="@font/objective_regular"
+        android:hint="Password"
+        app:boxBackgroundColor="@color/white"
+        app:hintAnimationEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/objective_regular"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Spinner
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_width="match_parent"
+        android:id="@+id/roleSpinner"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:padding="@dimen/dimen_10"
+        android:background="@drawable/bg_button_bg"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_16"
+        android:fontFamily="@font/fira_sans_semibold"
+        android:text="Register"/>
+
+    <TextView
+        android:id="@+id/cancelButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:padding="@dimen/dimen_10"
+        android:textSize="@dimen/font_16"
+        android:textAlignment="center"
+        android:fontFamily="@font/fira_sans_semibold"
+        android:text="@string/cancel"/>
+
+
+</LinearLayout>

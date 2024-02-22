@@ -43,6 +43,14 @@ class AuthEncryptedDataManager {
         }
     }
 
+    fun setProfile(name: String?,address: String?) {
+        sharedPreferences.edit(true) {
+            putString(FULL_NAME, name)
+            putString(ADDRESS, address)
+        }
+    }
+
+    fun getProfile() = sharedPreferences.getString(FULL_NAME, "") ?: ""
     /**
      * Function used to get the user access token in this sharedPref
      */
@@ -62,8 +70,8 @@ class AuthEncryptedDataManager {
         setUserDateInfo(userInfo.date_created?: DateCreatedData())
 
         sharedPreferences.edit(true) {
-            putInt(USER_INFO_ID, userInfo.user_id?: 0)
-            putString(USER_NAME, userInfo.name)
+            putString(USER_INFO_ID, userInfo.user_id)
+            putString(USER_NAME, userInfo.user_name)
             putString(USER_FIRST_NAME, userInfo.firstname)
             putString(USER_LAST_NAME, userInfo.lastname)
             putString(USER_EMAIL, userInfo.email)
@@ -78,10 +86,10 @@ class AuthEncryptedDataManager {
     fun getUserBasicInfo(): UserData {
         if (inMemoryUserData == null) {
             inMemoryUserData = UserData().apply {
-                user_id = sharedPreferences.getInt(USER_INFO_ID, 0)
+                user_id = sharedPreferences.getString(USER_INFO_ID, "")
                 firstname = sharedPreferences.getString(USER_FIRST_NAME, "")
                 email = sharedPreferences.getString(USER_EMAIL, "")
-                name = sharedPreferences.getString(USER_NAME, "0")
+                user_name = sharedPreferences.getString(USER_NAME, "0")
                 lastname = sharedPreferences.getString(USER_LAST_NAME, "0")
                 middlename = sharedPreferences.getString(USER_MIDDLE_NAME, "0")
                 username = sharedPreferences.getString(USER_USERNAME, "0")
@@ -201,7 +209,8 @@ class AuthEncryptedDataManager {
         private const val USER_DATE_MONTH_YEAR = "USER_DATE_MONTH_YEAR"
         private const val USER_DATE_TIME_PASSED = "USER_DATE_TIME_PASSED"
         private const val USER_DATE_TIMESTAMP = "USER_DATE_TIMESTAMP"
-
+        private const val FULL_NAME = "FULL_NAME"
+        private const val ADDRESS = "ADDRESS"
     }
 
 }

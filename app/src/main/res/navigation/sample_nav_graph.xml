@@ -9,13 +9,703 @@
         android:id="@+id/navigation_home"
         android:name="com.android.boilerplate.ui.sample.fragment.HomeFragment"
         android:label=""
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home" />
+
 
     <fragment
-        android:id="@+id/navigation_article"
-        android:name="com.android.boilerplate.ui.sample.fragment.ArticleFragment"
+        android:id="@+id/navigation_menu"
+        android:name="com.android.boilerplate.ui.sample.fragment.MenuFragment"
         android:label=""
-        tools:layout="@layout/fragment_article" />
+        tools:layout="@layout/fragment_menu">
+
+        <action
+            android:id="@+id/action_create_expenses"
+            app:destination="@id/navigation_create_expenses">
+
+        </action>
+
+        <action
+            android:id="@+id/action_go_sales_list"
+            app:destination="@id/navigation_sale_list">
+
+        </action>
+
+        <action
+            android:id="@+id/action_go_expenses_list"
+            app:destination="@id/navigation_all_expenses_list">
+
+        </action>
+
+        <action
+            android:id="@+id/action_go_payment_list"
+            app:destination="@id/navigation_all_payment_list">
+
+        </action>
 
 
+        <action
+            android:id="@+id/action_create_material"
+            app:destination="@id/navigation_create_material">
+
+        </action>
+
+
+        <action
+            android:id="@+id/action_material_all"
+            app:destination="@id/navigation_all_material_list">
+
+        </action>
+
+        <action
+            android:id="@+id/action_search_by_names"
+            app:destination="@id/navigation_search_customers">
+
+        </action>
+
+
+        <action
+            android:id="@+id/action_update_expenses"
+            app:destination="@id/navigation_update_expenses">
+            <argument
+                android:name="expenses_id"
+                app:argType="string" />
+            <argument
+                android:name="nature_of_expenses"
+                app:argType="string" />
+
+            <argument
+                android:name="amount"
+                app:argType="string" />
+
+
+            <argument
+                android:name="created_at"
+                app:argType="string" />
+
+
+        </action>
+
+        <action
+            android:id="@+id/action_update_material"
+            app:destination="@id/navigation_update_material">
+            <argument
+                android:name="material_id"
+                app:argType="string" />
+            <argument
+                android:name="material_name"
+                app:argType="string" />
+
+            <argument
+                android:name="quantity"
+                app:argType="string" />
+
+            <argument
+                android:name="item"
+                app:argType="string" />
+
+
+            <argument
+                android:name="amount"
+                app:argType="string" />
+
+            <argument
+                android:name="created_at"
+                app:argType="string" />
+
+
+        </action>
+
+        <action
+            android:id="@+id/action_create_customer"
+            app:destination="@id/navigation_create_customer">
+
+        </action>
+
+        <action
+            android:id="@+id/action_create_maintenance"
+            app:destination="@id/navigation_create_maintenance">
+
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+
+            <argument
+                android:name="account_name"
+                app:argType="string" />
+
+            <argument
+                android:name="address"
+                app:argType="string" />
+
+
+        </action>
+
+
+        <action
+            android:id="@+id/action_update_maintenance"
+            app:destination="@id/navigation_update_maintenance">
+
+            <argument
+                android:name="maintenance_id"
+                app:argType="string" />
+
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+
+            <argument
+                android:name="account_name"
+                app:argType="string" />
+
+            <argument
+                android:name="address"
+                app:argType="string" />
+
+            <argument
+                android:name="area"
+                app:argType="string" />
+
+            <argument
+                android:name="material_used"
+                app:argType="string" />
+
+
+            <argument
+                android:name="nature_of_repair"
+                app:argType="string" />
+
+            <argument
+                android:name="material_id"
+                app:argType="string" />
+
+            <argument
+                android:name="quantity"
+                app:argType="string" />
+
+
+        </action>
+
+        <action
+            android:id="@+id/action_update_customer"
+            app:destination="@id/navigation_update_customer">
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_payment_filter"
+            app:destination="@id/navigation_payment_filter">
+            <argument
+                android:name="payment_id"
+                app:argType="string" />
+
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+
+            <argument
+                android:name="account_name"
+                app:argType="string" />
+
+            <argument
+                android:name="account_balance"
+                app:argType="string" />
+
+            <argument
+                android:name="arrears_month"
+                app:argType="string" />
+
+            <argument
+                android:name="amount_paid"
+                app:argType="string" />
+
+            <argument
+                android:name="collectors_name"
+                app:argType="string" />
+
+            <argument
+                android:name="billing_month"
+                app:argType="string" />
+
+            <argument
+                android:name="created_at"
+                app:argType="string" />
+            <argument
+                android:name="plan_subscribed"
+                app:argType="string" />
+        </action>
+
+
+        <action
+            android:id="@+id/action_create_payment"
+            app:destination="@id/navigation_create_payment">
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+
+            <argument
+                android:name="account_name"
+                app:argType="string" />
+
+
+            <argument
+                android:name="address"
+                app:argType="string" />
+
+            <argument
+                android:name="account_balance"
+                app:argType="string" />
+
+            <argument
+                android:name="arrears"
+                app:argType="string" />
+
+            <argument
+                android:name="plan_subscribed"
+                app:argType="string" />
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_create_customer"
+        android:name="com.android.boilerplate.ui.sample.fragment.CreateCustomerFragment"
+        android:label=""
+        tools:layout="@layout/fragment_create_customer" />
+
+
+    <fragment
+        android:id="@+id/navigation_create_payment"
+        android:name="com.android.boilerplate.ui.sample.fragment.CreatePaymentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_payment_customer">
+
+        <argument
+            android:name="account_number"
+            app:argType="string" />
+        <argument
+            android:name="account_name"
+            app:argType="string" />
+
+        <argument
+            android:name="address"
+            app:argType="string" />
+
+        <argument
+            android:name="account_balance"
+            app:argType="string" />
+
+        <argument
+            android:name="arrears"
+            app:argType="string" />
+        <argument
+            android:name="plan_subscribed"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_update_customer"
+        android:name="com.android.boilerplate.ui.sample.fragment.UpdateCustomerFragment"
+        android:label=""
+        tools:layout="@layout/fragment_update_customer">
+        <action
+            android:id="@+id/action_payment_list"
+            app:destination="@id/navigation_payment_list">
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+        </action>
+
+
+        <action
+            android:id="@+id/action_maintenance_list"
+            app:destination="@id/navigation_maintenance_list">
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+        </action>
+
+        <argument
+            android:name="account_number"
+            app:argType="string" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_payment_list"
+        android:name="com.android.boilerplate.ui.sample.fragment.CustomerTransactionFragment"
+        android:label=""
+        tools:layout="@layout/fragment_customer_transaction">
+
+        <argument
+            android:name="account_number"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_payment_filter"
+            app:destination="@id/navigation_payment_filter">
+            <argument
+                android:name="payment_id"
+                app:argType="string" />
+
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+
+            <argument
+                android:name="account_name"
+                app:argType="string" />
+
+            <argument
+                android:name="account_balance"
+                app:argType="string" />
+
+            <argument
+                android:name="arrears_month"
+                app:argType="string" />
+
+            <argument
+                android:name="amount_paid"
+                app:argType="string" />
+
+            <argument
+                android:name="collectors_name"
+                app:argType="string" />
+
+            <argument
+                android:name="billing_month"
+                app:argType="string" />
+
+            <argument
+                android:name="created_at"
+                app:argType="string" />
+
+            <argument
+                android:name="plan_subscribed"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_maintenance_list"
+        android:name="com.android.boilerplate.ui.sample.fragment.CustomerMaintenanceFragment"
+        android:label=""
+        tools:layout="@layout/fragment_customer_maintenance">
+
+        <argument
+            android:name="account_number"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_maintenance_from_list_filter"
+            app:destination="@id/navigation_update_maintenance">
+            <argument
+                android:name="maintenance_id"
+                app:argType="string" />
+
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+
+            <argument
+                android:name="account_name"
+                app:argType="string" />
+
+            <argument
+                android:name="address"
+                app:argType="string" />
+
+            <argument
+                android:name="area"
+                app:argType="string" />
+
+            <argument
+                android:name="material_used"
+                app:argType="string" />
+
+
+            <argument
+                android:name="nature_of_repair"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_payment_filter"
+        android:name="com.android.boilerplate.ui.sample.fragment.UpdatePaymentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_update_payment_customer">
+
+        <argument
+            android:name="payment_id"
+            app:argType="string" />
+
+        <argument
+            android:name="account_number"
+            app:argType="string" />
+
+        <argument
+            android:name="account_name"
+            app:argType="string" />
+
+        <argument
+            android:name="account_balance"
+            app:argType="string" />
+
+        <argument
+            android:name="arrears_month"
+            app:argType="string" />
+
+        <argument
+            android:name="amount_paid"
+            app:argType="string" />
+
+        <argument
+            android:name="collectors_name"
+            app:argType="string" />
+
+        <argument
+            android:name="billing_month"
+            app:argType="string" />
+
+        <argument
+            android:name="created_at"
+            app:argType="string" />
+
+        <argument
+            android:name="plan_subscribed"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_create_maintenance"
+        android:name="com.android.boilerplate.ui.sample.fragment.CreateMaintenanceFragment"
+        android:label=""
+        tools:layout="@layout/fragment_create_maintenance">
+
+        <argument
+            android:name="account_number"
+            app:argType="string" />
+
+        <argument
+            android:name="account_name"
+            app:argType="string" />
+
+        <argument
+            android:name="address"
+            app:argType="string" />
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_update_maintenance"
+        android:name="com.android.boilerplate.ui.sample.fragment.UpdateMaintenanceFragment"
+        android:label=""
+        tools:layout="@layout/fragment_update_maintenance">
+        <argument
+            android:name="maintenance_id"
+            app:argType="string" />
+
+        <argument
+            android:name="account_number"
+            app:argType="string" />
+
+        <argument
+            android:name="account_name"
+            app:argType="string" />
+
+        <argument
+            android:name="address"
+            app:argType="string" />
+
+        <argument
+            android:name="area"
+            app:argType="string" />
+
+        <argument
+            android:name="material_used"
+            app:argType="string" />
+
+
+        <argument
+            android:name="nature_of_repair"
+            app:argType="string" />
+
+        <argument
+            android:name="material_id"
+            app:argType="string" />
+        <argument
+            android:name="quantity"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_create_material"
+        android:name="com.android.boilerplate.ui.sample.fragment.CreateMaterialsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_create_materials" />
+
+
+    <fragment
+        android:id="@+id/navigation_create_expenses"
+        android:name="com.android.boilerplate.ui.sample.fragment.CreateExpensesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_create_expenses" />
+
+    <fragment
+        android:id="@+id/navigation_update_expenses"
+        android:name="com.android.boilerplate.ui.sample.fragment.UpdateExpensesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_update_expenses">
+
+        <argument
+            android:name="expenses_id"
+            app:argType="string" />
+        <argument
+            android:name="nature_of_expenses"
+            app:argType="string" />
+
+        <argument
+            android:name="amount"
+            app:argType="string" />
+
+
+        <argument
+            android:name="created_at"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_update_material"
+        android:name="com.android.boilerplate.ui.sample.fragment.UpdateMaterialsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_update_materials">
+
+        <argument
+            android:name="material_id"
+            app:argType="string" />
+        <argument
+            android:name="material_name"
+            app:argType="string" />
+
+        <argument
+            android:name="quantity"
+            app:argType="string" />
+
+        <argument
+            android:name="item"
+            app:argType="string" />
+
+
+        <argument
+            android:name="amount"
+            app:argType="string" />
+
+        <argument
+            android:name="created_at"
+            app:argType="string" />
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_search_customers"
+        android:name="com.android.boilerplate.ui.sample.fragment.CustomerSearchNamesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_customer_saerch_name">
+
+        <action
+            android:id="@+id/action_go_update_customer"
+            app:destination="@id/navigation_update_customer">
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_sale_list"
+        android:name="com.android.boilerplate.ui.sample.fragment.SalesListSearchFragment"
+        android:label=""
+        tools:layout="@layout/fragment_sales_saerch">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_all_payment_list"
+        android:name="com.android.boilerplate.ui.sample.fragment.PaymentListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_payment_list">
+        <action
+            android:id="@+id/action_go_update_customer"
+            app:destination="@id/navigation_update_customer">
+            <argument
+                android:name="account_number"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_all_expenses_list"
+        android:name="com.android.boilerplate.ui.sample.fragment.ExpensesListSearchFragment"
+        android:label=""
+        tools:layout="@layout/fragment_expenses_saerch">
+        <action
+            android:id="@+id/action_go_update_expenses"
+            app:destination="@id/navigation_update_expenses">
+            <argument
+                android:name="expenses_id"
+                app:argType="string" />
+        </action>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_all_material_list"
+        android:name="com.android.boilerplate.ui.sample.fragment.MaterialListSearchFragment"
+        android:label=""
+        tools:layout="@layout/fragment_material_all">
+        <action
+            android:id="@+id/action_go_update_material_from_list"
+            app:destination="@id/navigation_update_material">
+            <argument
+                android:name="material_id"
+                app:argType="string" />
+            <argument
+                android:name="material_name"
+                app:argType="string" />
+
+            <argument
+                android:name="quantity"
+                app:argType="string" />
+
+            <argument
+                android:name="item"
+                app:argType="string" />
+
+
+            <argument
+                android:name="amount"
+                app:argType="string" />
+
+            <argument
+                android:name="created_at"
+                app:argType="string" />
+        </action>
+
+
+    </fragment>
 </navigation>

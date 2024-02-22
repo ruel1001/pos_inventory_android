@@ -66,7 +66,7 @@ class ArticleDetailViewModel @Inject constructor(
                 var errorResponse: ErrorModel? = gson.fromJson(errorBody?.charStream(), type)
                 _articleSharedFlow.emit(
                     ArticleDetailViewState.PopupError(
-                        PopupErrorState.HttpError, errorResponse?.msg.orEmpty()
+                        PopupErrorState.HttpError, errorResponse?.message.orEmpty()
                     )
                 )
             }

@@ -41,4 +41,12 @@ class ArticleRepository @Inject constructor(
         }.flowOn(ioDispatcher)
     }
 
+
+    fun getPaymentList(page: String, perPage:String): Flow<ArticleListResponse> {
+        return flow {
+            val response = articleRemoteDataSource.getArticleList(page, perPage)
+            emit(response)
+        }.flowOn(ioDispatcher)
+    }
+
 }

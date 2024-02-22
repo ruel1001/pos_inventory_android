@@ -74,7 +74,7 @@ abstract class BaseRepository constructor(
         if (environment == Environment.DEV && createSSLSocketFactory != null) {
             // Add SSL Socket Factory
             // Dev environment is the only one uses this
-            builder.sslSocketFactory(createSSLSocketFactory!!.first, createSSLSocketFactory!!.second)
+         //   builder.sslSocketFactory(createSSLSocketFactory!!.first, createSSLSocketFactory!!.second)
         }
 
         return builder.build()
@@ -86,11 +86,14 @@ abstract class BaseRepository constructor(
                 .connectTimeout(TIME_OUT, TimeUnit.SECONDS)
                 .writeTimeout(TIME_OUT, TimeUnit.SECONDS)
                 .readTimeout(TIME_OUT, TimeUnit.SECONDS)
-                .connectionSpecs(Collections.singletonList(createConnectionSpec()))
+            .connectionSpecs(listOf(ConnectionSpec.CLEARTEXT, ConnectionSpec.MODERN_TLS))
+             /*   .connectionSpecs(Collections.singletonList(createConnectionSpec()))
                 .dns(object : Dns {
                     override fun lookup(hostname: String) =
                             InetAddress.getAllByName(hostname).toList()
                 })
+
+              */
     }
 
     /**
@@ -102,10 +105,10 @@ abstract class BaseRepository constructor(
     private fun createConnectionSpec(): ConnectionSpec {
         return ConnectionSpec.Builder(ConnectionSpec.MODERN_TLS)
                 .tlsVersions(TlsVersion.TLS_1_2)
-                .cipherSuites(
-                        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
-                        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
-                        TLS_DHE_RSA_WITH_AES_128_GCM_SHA256)
+             //   .cipherSuites(
+               //         TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+             //           TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+             //           TLS_DHE_RSA_WITH_AES_128_GCM_SHA256)
                 .build()
     }
 

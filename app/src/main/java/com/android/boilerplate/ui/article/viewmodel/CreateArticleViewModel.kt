@@ -70,7 +70,7 @@ class CreateArticleViewModel @Inject constructor(
                 } else {
                     _articleSharedFlow.emit(
                         CreateArticleViewState.PopupError(
-                            PopupErrorState.HttpError, errorResponse?.msg.orEmpty()
+                            PopupErrorState.HttpError, errorResponse?.message.orEmpty()
                         )
                     )
                 }

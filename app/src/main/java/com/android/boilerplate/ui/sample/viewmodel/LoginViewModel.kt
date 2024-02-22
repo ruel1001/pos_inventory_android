@@ -39,7 +39,26 @@ class LoginViewModel @Inject constructor(
                 }
                 .collect {
                     _loginSharedFlow.emit(
-                        LoginViewState.Success(it.msg.orEmpty())
+                        LoginViewState.Success(it.message.orEmpty())
+                    )
+                }
+        }
+    }
+
+
+    fun doRegisterAccount(user_name : String, email : String, address : String, user_type : String,username: String,password: String) {
+        viewModelScope.launch {
+            authRepository.doRegister(user_name, email,address,user_type,username,password)
+                .onStart {
+                    _loginSharedFlow.emit(LoginViewState.Loading)
+                }
+                .catch { exception ->
+                    onError(exception)
+
+                }
+                .collect {
+                    _loginSharedFlow.emit(
+                        LoginViewState.Success(it.message.orEmpty())
                     )
                 }
         }
@@ -58,6 +77,7 @@ class LoginViewModel @Inject constructor(
                 .collect {
                     _loginSharedFlow.emit(
                         LoginViewState.SuccessGetUserInfo(it)
+
                     )
                 }
         }
@@ -85,7 +105,7 @@ class LoginViewModel @Inject constructor(
                 } else {
                     _loginSharedFlow.emit(
                         LoginViewState.PopupError(
-                            PopupErrorState.HttpError, errorResponse?.msg.orEmpty()
+                            PopupErrorState.HttpError, errorResponse?.message.orEmpty()
                         )
                     )
                 }
